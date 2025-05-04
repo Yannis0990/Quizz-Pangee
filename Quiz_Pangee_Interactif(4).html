@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz : La Pangée et la théorie de la dérive des continents</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { text-align: center; }
+        .question { margin-bottom: 20px; }
+        .question-title { font-weight: bold; margin-bottom: 5px; }
+        .answers label { display: block; margin-left: 20px; }
+        button { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
+        #result { font-weight: bold; margin-top: 20px; }
+    </style>
+    <script>
+        function checkAnswers() {
+            const correctAnswers = [2, 1, 2, 2, 2, 1, 1, 1];
+            let score = 0;
+            for (let i = 0; i < correctAnswers.length; i++) {
+                const radios = document.getElementsByName('q' + (i + 1));
+                if (radios[correctAnswers[i]].checked) {
+                    score++;
+                }
+            }
+            document.getElementById('result').innerText = "Votre score : " + score + " / " + correctAnswers.length;
+        }
+    </script>
+</head>
+<body>
+    <h1>Quiz : La Pangée et la théorie de la dérive des continents</h1>
+<div class="question"><div class="question-title">1. Qui était Alfred Wegener ?</div><div class="answers"><label><input type="radio" name="q1" value="0"> A) Un astronome</label><label><input type="radio" name="q1" value="1"> B) Un géologue spécialiste des volcans</label><label><input type="radio" name="q1" value="2"> C) Un météorologue allemand</label><label><input type="radio" name="q1" value="3"> D) Un explorateur polaire</label></div></div><div class="question"><div class="question-title">2. Quelle est la théorie proposée par Alfred Wegener ?</div><div class="answers"><label><input type="radio" name="q2" value="0"> A) La théorie de la tectonique des plaques</label><label><input type="radio" name="q2" value="1"> B) La théorie de la dérive des continents</label><label><input type="radio" name="q2" value="2"> C) La théorie de la formation des océans</label><label><input type="radio" name="q2" value="3"> D) La théorie de l'évolution</label></div></div><div class="question"><div class="question-title">3. Quelle était la superficie approximative de la Pangée ?</div><div class="answers"><label><input type="radio" name="q3" value="0"> A) 40 millions de km²</label><label><input type="radio" name="q3" value="1"> B) 60 millions de km²</label><label><input type="radio" name="q3" value="2"> C) 130 millions de km²</label><label><input type="radio" name="q3" value="3"> D) 200 millions de km²</label></div></div><div class="question"><div class="question-title">4. Quel océan entourait la Pangée ?</div><div class="answers"><label><input type="radio" name="q4" value="0"> A) L'océan Atlantique</label><label><input type="radio" name="q4" value="1"> B) L'océan Indien</label><label><input type="radio" name="q4" value="2"> C) Le Panthalassa</label><label><input type="radio" name="q4" value="3"> D) La mer Téthys</label></div></div><div class="question"><div class="question-title">5. Quel climat régnait sur la Pangée ?</div><div class="answers"><label><input type="radio" name="q5" value="0"> A) Un climat froid et glaciaire partout</label><label><input type="radio" name="q5" value="1"> B) Un climat tropical uniforme</label><label><input type="radio" name="q5" value="2"> C) Un climat varié, avec des zones arides et d'autres plus humides</label><label><input type="radio" name="q5" value="3"> D) Un climat exclusivement tempéré</label></div></div><div class="question"><div class="question-title">6. Quelle faune habitait la Pangée ?</div><div class="answers"><label><input type="radio" name="q6" value="0"> A) Seuls des mammifères</label><label><input type="radio" name="q6" value="1"> B) Des dinosaures et des reptiles, mais aussi des animaux marins et des insectes</label><label><input type="radio" name="q6" value="2"> C) Des oiseaux et des poissons uniquement</label><label><input type="radio" name="q6" value="3"> D) Des animaux de grande taille exclusivement</label></div></div><div class="question"><div class="question-title">7. Quelle flore était présente sur la Pangée ?</div><div class="answers"><label><input type="radio" name="q7" value="0"> A) Des plantes uniquement marines</label><label><input type="radio" name="q7" value="1"> B) Des fougères, des plantes à graines et des conifères, adaptées aux différents climats</label><label><input type="radio" name="q7" value="2"> C) Des palmiers uniquement</label><label><input type="radio" name="q7" value="3"> D) Des arbres fruitiers et des cactus</label></div></div><div class="question"><div class="question-title">8. Quand et pourquoi la Pangée a-t-elle commencé à se disloquer ?</div><div class="answers"><label><input type="radio" name="q8" value="0"> A) Il y a 65 millions d'années à cause d'un impact météoritique</label><label><input type="radio" name="q8" value="1"> B) Il y a 200 millions d'années, à cause des mouvements de convection dans le manteau terrestre</label><label><input type="radio" name="q8" value="2"> C) Il y a 50 millions d'années à cause d'un volcan</label><label><input type="radio" name="q8" value="3"> D) Il y a 300 millions d'années à cause d'une activité sismique intense</label></div></div>
+    <button onclick="checkAnswers()">Valider mes réponses</button>
+    <div id="result"></div>
+</body>
+</html>
